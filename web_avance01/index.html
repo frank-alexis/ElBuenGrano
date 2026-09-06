@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Buen Grano</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">☕ El Buen Grano</div>
+        <div class="buscador-container">
+            <input type="text" id="buscador" placeholder="Buscar productos (Ej. Mocca)..." onkeyup="buscarProductos()">
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <!--panel de productos-->
+        <section class="panel-izquierdo">
+            <div id="lista-productos" class="grid-productos"></div>
+
+            <div class="categorias" id="contenedor-categorias">
+
+            </div>
+        </section>
+
+        <!-- panel de compra -->
+        <section class="panel-derecho">
+            <h2>Orden Actual</h2>
+            
+            <div id="items-carrito" class="lista-carrito">
+                <p class="vacio">El carrito está vacío</p>
+            </div>
+
+            <!-- Datos del Cliente-->
+            <div class="datos-cliente">
+                <p class="titulo-seccion">Datos del Cliente</p>
+                <input type="text" id="nombreCliente" placeholder="Nombres (Ej: Pedro)">
+                <input type="text" id="apellidosCliente" placeholder="Apellidos (Ej: Goméz)">
+                <input type="text" id="dniCliente" placeholder="DNI (8 dígitos)" maxlength="8">
+                <input type="email" id="correoCliente" placeholder="Correo electrónico">
+            </div>
+
+            <!-- Totales -->
+            <div class="totales">
+                <div class="fila-total"><span>Sub Total</span> <span id="subtotal">S/ 0.00</span></div>
+                <div class="fila-total tax"><span>IGV (18%)</span> <span id="impuesto">S/ 0.00</span></div>
+                <div class="fila-total gran-total"><span>Total</span> <span id="total">S/ 0.00</span></div>
+            </div>
+
+            <!-- Botones -->
+            <div class="acciones">
+                <button class="btn-vip" onclick="aplicarDescuentoVIP()">% VIP</button> 
+                <button class="btn-cancelar" onclick="cancelarOrden()">Cancelar</button>
+                <button class="btn-pagar" onclick="procesarPago()">Cobrar</button>
+            </div>
+        </section>
+    </main>
+    <!-- modificaciones -->
+    <div id="modal-modificadores" class="modal-oculto">
+        <div class="modal-contenido">
+            <h3 id="modal-nombre-producto">Nombre del Café</h3>
+            
+            <label>Tamaño:</label>
+            <select id="mod-tamano" class="select-mod">
+                <option value="0">Alto (S/ 0.00)</option>
+                <option value="1.50">Grande (+ S/ 1.50)</option>
+                <option value="2.50">Venti (+ S/ 2.50)</option>
+            </select>
+
+            <label>Tipo de Leche:</label>
+            <select id="mod-leche" class="select-mod">
+                <option value="0">Entera (S/ 0.00)</option>
+                <option value="1.00">Deslactosada (+ S/ 1.00)</option>
+                <option value="1.50">Almendras (+ S/ 1.50)</option>
+            </select>
+
+            <div class="acciones-modal">
+                <button class="btn-cancelar" onclick="cerrarModal()">Cancelar</button>
+                <button class="btn-pagar" onclick="confirmarBebida()">Agregar al Carrito</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL TICKET -->
+    <div id="modal-ticket" class="modal-oculto">
+        <div class="modal-ticket-contenido">
+            <pre id="ticket-texto"></pre>
+            
+            <div class="acciones-modal">
+                <button class="btn-nueva-orden" onclick="cerrarTicket()">Nueva Orden</button>
+                <button class="btn-imprimir" onclick="imprimirTicket()">Imprimir Recibo</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="code.js"></script>
+</body>
+</html>
