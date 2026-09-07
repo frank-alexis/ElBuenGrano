@@ -55,7 +55,6 @@ header { background-color: var(--primary); color: var(--white); padding: 15px 30
 
 .acciones { display: flex; gap: 8px; }
 .acciones button { padding: 15px 10px; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 0.95rem; border: none; transition: 0.2s; }
-.btn-vip { background: #FFD700; color: var(--primary); flex: 1; }
 .btn-vip:hover { background: #F6C800; }
 .btn-cancelar { background: var(--white); border: 2px solid #d32f2f !important; color: #d32f2f; flex: 1.5; }
 .btn-cancelar:hover { background: #ffebee; }
@@ -79,8 +78,8 @@ header { background-color: var(--primary); color: var(--white); padding: 15px 30
 /* TICKET */
 .modal-ticket-contenido {
     background: white; 
-    padding: 30px 20px; 
-    width: 400px; 
+    padding: 25px 20px; 
+    width: 350px; 
     max-width: 90%;
     box-shadow: 0 10px 25px rgba(0,0,0,0.5); 
     border-top: 5px solid var(--primary);

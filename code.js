@@ -4,13 +4,30 @@ let categoriaActual = 'Café';
 
 // Arreglo de objetos
 const inventario = [
-    { id: 1, nombre: "Café Americano", precio: 8.50, categoria: "Café", imagen: "https://images.unsplash.com/photo-1559525839-b184a4d698c7?w=300&h=300&fit=crop" },
-    { id: 2, nombre: "Mocca Caliente", precio: 12.00, categoria: "Café", imagen: "https://images.unsplash.com/photo-1541167760496-1628856ab772?w=300&h=300&fit=crop" },
-    { id: 3, nombre: "Latte Macchiato", precio: 11.50, categoria: "Café", imagen: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=300&h=300&fit=crop" },
-    { id: 4, nombre: "Té Helado Limón", precio: 9.00, categoria: "Bebidas", imagen: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=300&h=300&fit=crop" },
-    { id: 5, nombre: "Croissant de Mantequilla", precio: 6.50, categoria: "Snacks", imagen: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=300&h=300&fit=crop" },
-    { id: 6, nombre: "Torta de Chocolate", precio: 14.00, categoria: "Postres", imagen: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=300&h=300&fit=crop" },
-    { id: 7, nombre: "Empanada de Carne", precio: 7.00, categoria: "Snacks", imagen: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=300&h=300&fit=crop" }
+    // --- CAFÉ ---
+    { id: 1, nombre: "Café Americano", precio: 9.50, categoria: "Café", imagen: "https://images.unsplash.com/photo-1559525839-b184a4d698c7?w=300&h=300&fit=crop" },
+    { id: 2, nombre: "Caffè Mocha", precio: 14.50, categoria: "Café", imagen: "https://images.unsplash.com/photo-1541167760496-1628856ab772?w=300&h=300&fit=crop" },
+    { id: 3, nombre: "Caramel Macchiato", precio: 15.00, categoria: "Café", imagen: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=300&h=300&fit=crop" },
+    { id: 4, nombre: "Cappuccino", precio: 12.50, categoria: "Café", imagen: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=300&h=300&fit=crop" },
+    { id: 5, nombre: "Cold Brew", precio: 13.00, categoria: "Café", imagen: "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=300&h=300&fit=crop" },
+
+    // --- BEBIDAS ---
+    { id: 6, nombre: "Matcha Latte", precio: 15.50, categoria: "Bebidas", imagen: "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=300&h=300&fit=crop" },
+    { id: 7, nombre: "Chocolate Caliente", precio: 13.50, categoria: "Bebidas", imagen: "https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?w=300&h=300&fit=crop" },
+    { id: 8, nombre: "Té Chai Latte", precio: 14.00, categoria: "Bebidas", imagen: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=300&h=300&fit=crop" },
+    { id: 9, nombre: "Refresco Berry Hibiscus", precio: 12.00, categoria: "Bebidas", imagen: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=300&h=300&fit=crop" },
+
+    // --- SNACKS ---
+    { id: 10, nombre: "Croissant de Mantequilla", precio: 8.50, categoria: "Snacks", imagen: "https://images.unsplash.com/photo-1555507036-ab1f40ce88cb?w=300&h=300&fit=crop" },
+    { id: 11, nombre: "Panini Pollo y Queso", precio: 18.00, categoria: "Snacks", imagen: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=300&h=300&fit=crop" },
+    { id: 12, nombre: "Wrap de Pavo y Queso", precio: 16.50, categoria: "Snacks", imagen: "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=300&h=300&fit=crop" },
+    { id: 13, nombre: "Quiche Lorraine", precio: 15.00, categoria: "Snacks", imagen: "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=300&h=300&fit=crop" },
+
+    // --- POSTRES ---
+    { id: 14, nombre: "Cheesecake de Maracuyá", precio: 14.50, categoria: "Postres", imagen: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=300&h=300&fit=crop" },
+    { id: 15, nombre: "Muffin de Arándanos", precio: 9.00, categoria: "Postres", imagen: "https://images.unsplash.com/photo-1607958996333-41aef7caefcc?w=300&h=300&fit=crop" },
+    { id: 16, nombre: "Brownie con Fudge", precio: 9.50, categoria: "Postres", imagen: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=300&h=300&fit=crop" },
+    { id: 17, nombre: "Torta de Zanahoria", precio: 13.50, categoria: "Postres", imagen: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=300&h=300&fit=crop" }
 ];
 
 // Lab 4: Valores únicos con Set
@@ -31,25 +48,17 @@ const inicializarCategorias = () => {
     });
 };
 
-// Lab 4: Funciones flecha + map
-const aplicarDescuentoVIP = () => {
-    if (carrito.length === 0) return alert("Agregue productos primero.");
-    carrito = carrito.map(item => ({
-        ...item,
-        precio: parseFloat((item.precio * 0.90).toFixed(2))
-    }));
-    renderizarCarrito();
-    alert("¡Descuento VIP del 10% aplicado a toda la orden!");
-};
-
 // Lab 3: Normalizar nombre y Extraer iniciales
+// Lab 3: Ocultar información de correo
+// Lab 3: Generar palabra
+
 const prepararNombreParaVaso = (nombre) => {
     let nombreLimpio = nombre.trim().toLowerCase().replace('_', ' ');
     let inicial = nombreLimpio.charAt(0).toUpperCase();
     return { nombreLimpio, inicial };
 };
 
-// Lab 3: Ocultar información de correo
+
 const enmascararDatosPrivados = (correo) => {
     if(!correo) return { emailOculto: "No registrado" };
     let arrobaIndex = correo.indexOf('@');
@@ -57,7 +66,7 @@ const enmascararDatosPrivados = (correo) => {
     return { emailOculto };
 };
 
-// Lab 3: Generar palabra
+
 const generarNumeroOrden = (apellidos, nombre, dni) => {
     let inicialesApellidos = apellidos ? apellidos.split(' ').map(p => p.charAt(0)).join('') : 'XX';
     let inicialNombre = nombre ? nombre.charAt(0) : 'X';
@@ -206,15 +215,43 @@ const imprimirTicket = () => {
 };
 
 const procesarPago = () => {
-    if (carrito.length === 0) return alert("El carrito está vacío.");
+    if (carrito.length === 0) {
+        alert("El carrito está vacío.");
+        return;
+    }
     
-    let nombre = document.getElementById("nombreCliente").value;
-    let apellidos = document.getElementById("apellidosCliente").value;
-    let dni = document.getElementById("dniCliente").value;
-    let correo = document.getElementById("correoCliente").value;
+    let nombre = document.getElementById("nombreCliente").value.trim();
+    let apellidos = document.getElementById("apellidosCliente").value.trim();
+    let dni = document.getElementById("dniCliente").value.trim();
+    let correo = document.getElementById("correoCliente").value.trim();
 
-    if(!nombre || !apellidos || dni.length < 2) {
-        return alert("Por favor complete los nombres, apellidos y DNI.");
+    // 1. Validar nombre y apellidos
+    const soloLetrasRegex = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
+    if (!nombre || !soloLetrasRegex.test(nombre)) {
+        alert("Error: El nombre solo debe contener letras.");
+        document.getElementById("nombreCliente").focus();
+        return;
+    }
+    if (!apellidos || !soloLetrasRegex.test(apellidos)) {
+        alert("Error: Los apellidos solo deben contener letras.");
+        document.getElementById("apellidosCliente").focus();
+        return;
+    }
+
+    // 2. Validar DNI 
+    const soloNumerosDniRegex = /^\d{8}$/;
+    if (!soloNumerosDniRegex.test(dni)) {
+        alert("Error: El DNI debe contener exactamente 8 números.");
+        document.getElementById("dniCliente").focus();
+        return;
+    }
+
+    // 3. Validar Correo 
+    const correoRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (correo !== "" && !correoRegex.test(correo)) {
+        alert("Error: El formato del correo electrónico no es válido.");
+        document.getElementById("correoCliente").focus();
+        return;
     }
 
     let { nombreLimpio } = prepararNombreParaVaso(nombre);
@@ -223,10 +260,8 @@ const procesarPago = () => {
     
     let totalTexto = document.getElementById("total").innerText.replace('S/ ', '');
     let totalNumerico = parseFloat(totalTexto);
-    
-    let estrellasGanadas = Math.floor(totalNumerico); 
+    let estrellasGanadas = Math.floor(totalNumerico);
 
-    // TICKET DEL CLIENTE
     let ticketCliente = 
 `==================================
      ☕ EL BUEN GRANO - RECIBO
@@ -247,11 +282,11 @@ TOTAL PAGADO: S/ ${totalNumerico.toFixed(2)}
      ¡Gracias por su visita!`;
 
     document.getElementById("ticket-texto").innerText = ticketCliente;
-
     document.getElementById("modal-ticket").className = "modal-visible";
     
     cancelarOrden(); 
 };
+
 // Arranque inicial
 inicializarCategorias();
 renderizarProductos();
