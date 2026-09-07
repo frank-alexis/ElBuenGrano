@@ -5,29 +5,29 @@ let categoriaActual = 'Café';
 // Arreglo de objetos
 const inventario = [
     // --- CAFÉ ---
-    { id: 1, nombre: "Café Americano", precio: 9.50, categoria: "Café", imagen: "https://images.unsplash.com/photo-1559525839-b184a4d698c7?w=300&h=300&fit=crop" },
-    { id: 2, nombre: "Caffè Mocha", precio: 14.50, categoria: "Café", imagen: "https://images.unsplash.com/photo-1541167760496-1628856ab772?w=300&h=300&fit=crop" },
-    { id: 3, nombre: "Caramel Macchiato", precio: 15.00, categoria: "Café", imagen: "https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=300&h=300&fit=crop" },
-    { id: 4, nombre: "Cappuccino", precio: 12.50, categoria: "Café", imagen: "https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=300&h=300&fit=crop" },
-    { id: 5, nombre: "Cold Brew", precio: 13.00, categoria: "Café", imagen: "https://images.unsplash.com/photo-1517701550927-30cf4ba1dba5?w=300&h=300&fit=crop" },
+    { id: 1, nombre: "Café Americano", precio: 9.50, categoria: "Café", imagen: "https://images.pexels.com/photos/19573020/pexels-photo-19573020.jpeg" },
+    { id: 2, nombre: "Caffè Mocha", precio: 14.50, categoria: "Café", imagen: "https://images.pexels.com/photos/14704656/pexels-photo-14704656.jpeg" },
+    { id: 3, nombre: "Caramel Macchiato", precio: 15.00, categoria: "Café", imagen: "https://images.pexels.com/photos/15086185/pexels-photo-15086185.jpeg" },
+    { id: 4, nombre: "Cappuccino", precio: 12.50, categoria: "Café", imagen: "https://images.pexels.com/photos/2559312/pexels-photo-2559312.jpeg" },
+    { id: 5, nombre: "Cold Brew", precio: 13.00, categoria: "Café", imagen: "https://images.pexels.com/photos/25956830/pexels-photo-25956830.jpeg" },
 
     // --- BEBIDAS ---
-    { id: 6, nombre: "Matcha Latte", precio: 15.50, categoria: "Bebidas", imagen: "https://images.unsplash.com/photo-1536256263959-770b48d82b0a?w=300&h=300&fit=crop" },
-    { id: 7, nombre: "Chocolate Caliente", precio: 13.50, categoria: "Bebidas", imagen: "https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?w=300&h=300&fit=crop" },
-    { id: 8, nombre: "Té Chai Latte", precio: 14.00, categoria: "Bebidas", imagen: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?w=300&h=300&fit=crop" },
-    { id: 9, nombre: "Refresco Berry Hibiscus", precio: 12.00, categoria: "Bebidas", imagen: "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=300&h=300&fit=crop" },
+    { id: 6, nombre: "Matcha Latte", precio: 15.50, categoria: "Bebidas", imagen: "https://images.pexels.com/photos/17366787/pexels-photo-17366787.jpeg" },
+    { id: 7, nombre: "Chocolate Caliente", precio: 13.50, categoria: "Bebidas", imagen: "https://images.pexels.com/photos/10406759/pexels-photo-10406759.jpeg" },
+    { id: 8, nombre: "Té Chai Latte", precio: 14.00, categoria: "Bebidas", imagen: "https://images.pexels.com/photos/37146476/pexels-photo-37146476.jpeg" },
+    { id: 9, nombre: "Refresco Berry Hibiscus", precio: 12.00, categoria: "Bebidas", imagen: "https://media.istockphoto.com/id/1311089753/es/foto/t%C3%A9-fr%C3%ADo-de-hibisco-o-karkade-con-lim%C3%B3n-menta-y-hielo-en-vidrio-sobre-una-mesa-de-madera.jpg?b=1&s=612x612&w=0&k=20&c=_Vpf95CC-F6HLTS_9qZ2IkOWf27-5bvz4RBx67XjTi8=" },
 
     // --- SNACKS ---
-    { id: 10, nombre: "Croissant de Mantequilla", precio: 8.50, categoria: "Snacks", imagen: "https://images.unsplash.com/photo-1555507036-ab1f40ce88cb?w=300&h=300&fit=crop" },
-    { id: 11, nombre: "Panini Pollo y Queso", precio: 18.00, categoria: "Snacks", imagen: "https://images.unsplash.com/photo-1528735602780-2552fd46c7af?w=300&h=300&fit=crop" },
-    { id: 12, nombre: "Wrap de Pavo y Queso", precio: 16.50, categoria: "Snacks", imagen: "https://images.unsplash.com/photo-1626700051175-6818013e1d4f?w=300&h=300&fit=crop" },
-    { id: 13, nombre: "Quiche Lorraine", precio: 15.00, categoria: "Snacks", imagen: "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=300&h=300&fit=crop" },
+    { id: 10, nombre: "Croissant de Mantequilla", precio: 8.50, categoria: "Snacks", imagen: "https://images.pexels.com/photos/29850845/pexels-photo-29850845.jpeg" },
+    { id: 11, nombre: "Panini Pollo y Queso", precio: 18.00, categoria: "Snacks", imagen: "https://images.pexels.com/photos/32715053/pexels-photo-32715053.jpeg" },
+    { id: 12, nombre: "Wrap de Pavo y Queso", precio: 16.50, categoria: "Snacks", imagen: "https://images.pexels.com/photos/15010305/pexels-photo-15010305.jpeg" },
+    { id: 13, nombre: "Quiche Lorraine", precio: 15.00, categoria: "Snacks", imagen: "https://images.pexels.com/photos/29538433/pexels-photo-29538433.jpeg" },
 
     // --- POSTRES ---
-    { id: 14, nombre: "Cheesecake de Maracuyá", precio: 14.50, categoria: "Postres", imagen: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=300&h=300&fit=crop" },
-    { id: 15, nombre: "Muffin de Arándanos", precio: 9.00, categoria: "Postres", imagen: "https://images.unsplash.com/photo-1607958996333-41aef7caefcc?w=300&h=300&fit=crop" },
-    { id: 16, nombre: "Brownie con Fudge", precio: 9.50, categoria: "Postres", imagen: "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=300&h=300&fit=crop" },
-    { id: 17, nombre: "Torta de Zanahoria", precio: 13.50, categoria: "Postres", imagen: "https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=300&h=300&fit=crop" }
+    { id: 14, nombre: "Cheesecake de Maracuyá", precio: 14.50, categoria: "Postres", imagen: "https://images.pexels.com/photos/38134573/pexels-photo-38134573.jpeg" },
+    { id: 15, nombre: "Muffin de Arándanos", precio: 9.00, categoria: "Postres", imagen: "https://images.pexels.com/photos/36927102/pexels-photo-36927102.jpeg" },
+    { id: 16, nombre: "Brownie con Fudge", precio: 9.50, categoria: "Postres", imagen: "https://images.pexels.com/photos/17488694/pexels-photo-17488694.jpeg" },
+    { id: 17, nombre: "Torta de Zanahoria", precio: 13.50, categoria: "Postres", imagen: "https://images.pexels.com/photos/13188970/pexels-photo-13188970.jpeg" }
 ];
 
 // Lab 4: Valores únicos con Set
